@@ -30,6 +30,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         sudo apt-get install build-essential
 elif [[ "$OSTYPE" == "darwin"* ]]; then
+        echo "Nothing to do on Macos"
         # Mac OSX
 fi
 
