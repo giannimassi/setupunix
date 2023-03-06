@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd $HOME
+
 echo '
  ██████╗ ██╗ █████╗ ███╗   ██╗███╗   ██╗██╗    ███╗   ███╗ █████╗ ███████╗███████╗██╗              ██╗   ██╗███╗   ██╗██╗██╗  ██╗    ███████╗███████╗████████╗██╗   ██╗██████╗ 
 ██╔════╝ ██║██╔══██╗████╗  ██║████╗  ██║██║    ████╗ ████║██╔══██╗██╔════╝██╔════╝██║              ██║   ██║████╗  ██║██║╚██╗██╔╝    ██╔════╝██╔════╝╚══██╔══╝██║   ██║██╔══██╗
@@ -11,6 +13,9 @@ echo '
 
 
 ## Download this repo and de-compress at dotfiles
+wget https://github.com/giannimassi/setupunix/archive/main.zip
+unzip main.zip -d ./setupunix
+rm main.zip
 
 ## Install Brew (works both on macos and linux)
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -30,7 +35,7 @@ fi
 
 # Install everything!
 brew tap jtyr/repo # needed for gbt
-brew install gcc tmux stow direnv zsh gbt git
+brew install gcc tmux stow direnv zsh gbt git tldr
 brew install --cask visual-studio-code
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
