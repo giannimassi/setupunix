@@ -1,4 +1,5 @@
 #!/bin/bash
+set +ex
 
 cd $HOME
 
@@ -12,13 +13,11 @@ echo '
                                                                                                                                                                                '
 
 
-## Download this repo and de-compress at dotfiles
-wget https://github.com/giannimassi/setupunix/archive/main.zip
-unzip main.zip -d ./setupunix
-rm main.zip
+# ## Download this repo and de-compress at dotfiles
+curl -L https://github.com/giannimassi/setupunix/archive/main.tar.gz | tar zxf -
 
-## Install Brew (works both on macos and linux)
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# ## Install Brew (works both on macos and linux)
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 
 ## Run these two commands in your terminal to add Homebrew to your PATH:
